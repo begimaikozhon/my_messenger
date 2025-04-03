@@ -27,5 +27,5 @@ class ChatModel extends HiveObject {
   MessageModel? get lastMessage => messages.isNotEmpty ? messages.last : null;
 
   DateTime? get lastMessageTime =>
-      lastMessage != null ? lastMessage!.timestamp : null;
+      lastMessage?.timestamp;
 }
